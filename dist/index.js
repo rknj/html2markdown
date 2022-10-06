@@ -27808,8 +27808,12 @@ const TurndownService = __nccwpck_require__(4800);
 const TurndownPluginGfm = __nccwpck_require__(9818);
 const turndownService = new TurndownService();
 const tables = TurndownPluginGfm.tables;
-turndownService.use(tables);
-const markdown = turndownService.turndown(html);
+const markdown = turndownService
+    .use(tables)
+    .remove("head")
+    .remove("img")
+    .remove("hr")
+    .turndown(html);
 console.log(markdown);
 core.setOutput("markdown-content", markdown);
 
