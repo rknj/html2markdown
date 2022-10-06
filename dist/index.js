@@ -27807,13 +27807,7 @@ const html = fs.readFileSync(htmlFile, "utf8");
 const TurndownService = __nccwpck_require__(4800);
 const TurndownPluginGfm = __nccwpck_require__(9818);
 const turndownService = new TurndownService();
-const markdown = turndownService
-    .remove("head")
-    .remove("img")
-    .remove("a")
-    .remove("hr")
-    .use(TurndownPluginGfm.tables)
-    .turndown(html);
+const markdown = turndownService.use(TurndownPluginGfm.gfm).turndown(html);
 console.log(markdown);
 core.setOutput("markdown-content", markdown);
 
