@@ -27629,14 +27629,15 @@ var __webpack_exports__ = {};
 var exports = __webpack_exports__;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const turndown_1 = __nccwpck_require__(3996);
+//import TurndownService from "turndown";
 const fs = __nccwpck_require__(7147);
 const core = __nccwpck_require__(115);
 const htmlFile = core.getInput("html-file");
 console.log(htmlFile);
 const html = fs.readFileSync(htmlFile);
 // Create an instance of the Turndown service
-const turndownService = new turndown_1.default();
+const TurndownService = __nccwpck_require__(3996);
+const turndownService = new TurndownService();
 const markdown = turndownService.turndown(html);
 console.log(markdown);
 core.setOutput("markdown-content", markdown);
