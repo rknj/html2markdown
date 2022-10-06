@@ -9,12 +9,11 @@ const html = fs.readFileSync(htmlFile, "utf8");
 const TurndownService = require("turndown");
 const TurndownPluginGfm = require("turndown-plugin-gfm");
 const turndownService = new TurndownService();
-const tables = TurndownPluginGfm.tables;
 const markdown = turndownService
-  .use(tables)
   .remove("head")
   .remove("img")
   .remove("hr")
+  .use(TurndownPluginGfm.tables)
   .turndown(html);
 console.log(markdown);
 
