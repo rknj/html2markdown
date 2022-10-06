@@ -1,6 +1,6 @@
 import TurndownService from "turndown";
 import * as fs from "fs";
-import core from "@actions/core";
+import * as core from "@actions/core";
 
 const htmlFile = core.getInput("html-file");
 console.log(htmlFile);
