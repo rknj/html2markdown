@@ -27634,13 +27634,16 @@ const fs = __nccwpck_require__(7147);
 const core = __nccwpck_require__(115);
 const htmlFile = core.getInput("html-file");
 console.log(htmlFile);
-const html = fs.readFileSync(htmlFile);
-// Create an instance of the Turndown service
-const TurndownService = __nccwpck_require__(3996);
-const turndownService = new TurndownService();
-const markdown = turndownService.turndown(html);
-console.log(markdown);
-core.setOutput("markdown-content", markdown);
+fs.readFile(htmlFile, function read(err, data) {
+    if (err) {
+        throw err;
+    }
+    const TurndownService = __nccwpck_require__(3996);
+    const turndownService = new TurndownService();
+    const markdown = turndownService.turndown(data);
+    console.log(markdown);
+    core.setOutput("markdown-content", markdown);
+});
 
 })();
 
