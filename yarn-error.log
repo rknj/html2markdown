@@ -1,0 +1,46 @@
+Arguments:
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js build
+
+PATH:
+  C:\Users\mdechecchi\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\mdechecchi\bin;C:\Program Files\Microsoft MPI\Bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\GnuPG\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.8.1\bin;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1\missioncontrol;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1\webstart;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1\bin;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1\jre\bin;C:\Program Files (x86)\Yarn\bin;C:\Program Files\nodejs;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn;C:\Program Files\Microsoft SQL Server\150\Tools\Binn;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn;C:\Program Files\Microsoft SQL Server\150\DTS\Binn;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;C:\Program Files\dotnet;C:\Program Files\Amazon\AWSCLIV2;C:\Users\mdechecchi\.windows-build-tools\python27;C:\Users\mdechecchi\AppData\Local\Microsoft\WindowsApps;C:\Users\mdechecchi\AppData\Local\Yarn\bin;C:\Users\mdechecchi\AppData\Roaming\npm;C:\Apps\vault.exe;C:\Applications\Atlassian\atlassian-plugin-sdk-8.2.7\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version:
+  1.22.5
+
+Node version:
+  16.4.2
+
+Platform:
+  win32 x64
+
+Trace:
+  SyntaxError: C:\Users\mdechecchi\sources\html2markdown\package.json: Unexpected token } in JSON at position 195
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:310:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:321:13
+
+npm manifest:
+  {
+    "name": "html2markdown",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.ts",
+    "scripts": {
+      "build": "tsc && ncc build index.ts",
+      "format": "prettier --write **/*.ts",
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "turndown": "^7.1.1"
+    }
+  }
+
+yarn manifest:
+  No manifest
+
+Lockfile:
+  No lockfile

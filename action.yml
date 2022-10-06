@@ -1,0 +1,12 @@
+name: 'Convert HTML to Markdown'
+description: 'Action converting HTML to Markdown using turndown library'
+inputs:
+  html-file:
+    description: 'HTML file to convert'
+    required: true
+outputs:
+  markdown-content:
+    description: 'Markdown output'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
