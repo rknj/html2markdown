@@ -27810,6 +27810,7 @@ const turndownService = new TurndownService();
 const markdown = turndownService
     .remove("head")
     .remove("img")
+    .remove("a")
     .remove("hr")
     .use(TurndownPluginGfm.tables)
     .turndown(html);
