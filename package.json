@@ -16,7 +16,9 @@
   "dependencies": {
     "@vercel/ncc": "^0.34.0",
     "prettier": "^2.7.1",
-    "turndown": "^7.1.1"
+    "turndown": "^7.1.1",
+    "turndown-plugin-gfm": "^1.0.2",
+    "typescript": "^4.8.4"
   },
   "devDependencies": {
     "@actions/core": "^1.10.0",
