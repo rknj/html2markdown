@@ -7,6 +7,8 @@ inputs:
 outputs:
   markdown-content:
     description: 'Markdown output'
+  markdown-file:
+    description: 'Markdown file (located into the same folder as the input file)'
 runs:
   using: 'node12'
   main: 'dist/index.js'

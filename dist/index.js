@@ -27802,14 +27802,19 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const fs = __nccwpck_require__(7147);
 const core = __nccwpck_require__(2186);
 const htmlFile = core.getInput("html-file");
-console.log(htmlFile);
+core.info("Input file:" + htmlFile);
 const html = fs.readFileSync(htmlFile, "utf8");
 const TurndownService = __nccwpck_require__(4800);
 const TurndownPluginGfm = __nccwpck_require__(9818);
 const turndownService = new TurndownService();
 const markdown = turndownService.use(TurndownPluginGfm.gfm).turndown(html);
-console.log(markdown);
+core.debug("Generated markdown:" + markdown);
 core.setOutput("markdown-content", markdown);
+const Path = __nccwpck_require__(1017);
+const markdownFile = Path.parse(htmlFile).dir + "/" + Path.parse(htmlFile).name + ".md";
+fs.writeFileSync(markdownFile, markdown);
+core.info("Output file:" + markdownFile);
+core.setOutput("markdown-file", markdownFile);
 
 })();
 
