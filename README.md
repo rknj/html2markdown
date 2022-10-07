@@ -31,6 +31,10 @@ jobs:
           body: |
             ${{ steps.html2markdown.outputs.markdown-content }}
           assignees: rknj
+      - name: Show content of generated markdown file
+        if: always()
+        run: |
+          cat ${{ steps.html2markdown.outputs.markdown-file }}
 ```
 
 ### Build
