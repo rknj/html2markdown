@@ -10,5 +10,5 @@ outputs:
   markdown-file:
     description: 'Markdown file (located into the same folder as the input file)'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
